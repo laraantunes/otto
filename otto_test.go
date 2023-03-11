@@ -3,7 +3,6 @@ package otto
 import (
 	"sync"
 	"testing"
-	"time"
 )
 
 var wg sync.WaitGroup
@@ -15,7 +14,6 @@ type MySub struct {
 
 func (s *MySub) Handle(payload interface{}) {
 	defer wg.Done()
-	time.Sleep(1)
 	assertValue[s.id] = payload.(string)
 }
 
