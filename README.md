@@ -9,7 +9,7 @@ package main
 import (
     "fmt"
 
-    "github.com/maycowa/otto"
+    "github.com/laraantunes/otto"
 )
 
 // You must define one (or as many as you need) 
