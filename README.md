@@ -1,5 +1,5 @@
 # Otto
-A very simple on-memory pub/sub system for Golang.
+A very simple in-memory pub/sub system for Golang.
 
 # How to use
 ```go
@@ -32,7 +32,7 @@ func main() {
     s1 := &MySubscriber{}
     s2 := &MySubscriber{}
     s3 := &MySubscriber{}
-    otto.RegisterSubscribers(s1, s2, s3)
+    otto.RegisterSubscribers("topic1", s1, s2, s3)
 
     // Finally, you may publish to a topic:
     otto.Publish("topic1", "my message")
